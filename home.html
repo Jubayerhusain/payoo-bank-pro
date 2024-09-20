@@ -26,19 +26,20 @@
                 <h1 id="current-balance" class="text-5xl font-bold  text-center">54000</h1>
                 <p class="text-2xl text-center">Available Balance</p>
               </div>
-              <div>
-                <button id="add-money-btn" class="btn btn-lg bg-primary text-white my-5">Add Money</button>
-                <button id="cash-out-btn" class="btn btn-lg bg-primary text-white my-5">Cash Out</button>
+              <div class="grid grid-cols-2 gap-2 mt-2">
+                <button id="add-money-btn" class="btn btn-lg bg-primary text-white">Add Money</button>
+                <button id="cash-out-btn" class="btn btn-lg bg-primary text-white">Cash Out</button>
+                <button id="transection-btn" class="btn btn-lg bg-primary text-white">Transection</button>
                </div>
-               <!-- add-money-input-section  -->
+               <!-- add-money-input-section start -->
               <div >
-                <div id="add-money-form" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <div id="add-money-form" class=" card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl ">
                   <form class="card-body">
                     <div class="form-control">
                       <label class="label">
                         <span class="label-text">Amount</span>
                       </label>
-                      <input type="text" placeholder="Type amount" id="amount" class="input input-bordered" required />
+                      <input type="text" placeholder="Type amount" id="add-amount" class="input input-bordered" required />
                     </div>
                     <div class="form-control">
                       <label class="label">
@@ -52,7 +53,8 @@
                   </form>
                 </div>
               </div>
-              <!-- cash out-input-section  -->
+               <!-- add-money-input-section end -->
+              <!-- cash out-input-section start -->
               <div >
                 <div id="cash-out-form" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                   <form class="card-body">
@@ -74,6 +76,17 @@
                   </form>
                 </div>
               </div>
+              <!-- cash out-input-section end -->
+               <!-- transection section start  -->
+                <div>
+                  <div id="transection-section" class="hidden">
+                    <h1 class="text-2xl text-white bg-slate-500 py-5 px-5 rounded-lg text-center font-semibold">Your Transection history</h1>
+                    <div id="transaction-container" class="space-y-3 text-xl font-semibold text-fuchsia-600 w-10/12">
+                        
+                    </div>
+                  </div>
+                </div>
+               <!-- transection section end  -->
             </div>
           </div>
         </div>
@@ -81,8 +94,10 @@
     </div>
   </div>
 
-  <script src="script/home.js"></script>
-  <script src="script/cashOut.js"></script>
+
   <script src="script/addMoney.js"></script>
+  <script src="script/cashOut.js"></script>
+  <script src="script/features.js"></script>
+  <script src="script/utilitise.js"></script>
 </body>
 </html>
